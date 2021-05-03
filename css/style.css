@@ -1,0 +1,33 @@
+body {
+    background: rgb(248, 248, 248);
+    height: 100vh;
+    color: rgb(13, 52, 109);
+}
+
+body p {
+    font-family: sans-serif;
+}
+
+body h1 {
+    font-family: serif;
+}
+
+.main {
+    max-width: 600px;
+    letter-spacing: 1px;
+    padding: 0 10vw;
+    margin: 5vh 0 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    color: rgb(13, 52, 109);
+    padding: 20px 30px;
+    text-align: center;
+    width: 100%;
+}
+  
+footer a {
+    color: inherit;
+}
