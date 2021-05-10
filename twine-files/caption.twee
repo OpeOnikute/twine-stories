@@ -1,0 +1,8 @@
+<!-- Name: StoryCaption -->
+<div style="text-align: left">
+<strong>Here’s what you know so far:</strong>
+<<if $knowledge.size eq 0>> nothing yet!
+<<else>>
+<ol> <<for _i, _name range $knowledge>> <li> _name</li> <</for>> </ol>
+<</if>>
+</div>

@@ -1,0 +1,2 @@
+Config.passages.nobr = true;
+Config.addVisitedLinkClass = true;

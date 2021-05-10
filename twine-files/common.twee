@@ -1,0 +1,38 @@
+<!-- Name: New Information -->
+<<widget "newinfo">>
+<<if !$knowledge.has($args[0])>>
+<div class="newinfo">
+    <h2> you have new information! </h2>
+    <<run $knowledge.add($args[0])>>
+    <p style="text-align: center;">
+     <strong>"<<print $args[0]>>"</strong>
+    </p>
+</div>
+<</if>>
+<</widget>>
+
+
+<<widget "init">>
+<<if ndef $knowledge>>
+<<set $knowledge = new Set()>>
+<</if>>
+<</widget>>
+
+
+<!-- <<ask "Why do you think this happened?" "$variable" "Next page">> -->
+<<widget "ask">>
+<div style="margin-top: 3em;">
+<<print $args[0]>> &nbsp; <<textbox $args[1] "" $args[2]>>
+<div style="display: flex; margin-top: .5em;">
+    <<link "Submit" $args[2]>><</link>>
+    <<link "I don't know" $args[2]>><</link>>
+</div>
+</div>
+<</widget>>
+
+<!-- <<you-said "Your reason for the SYN packets being retried:" $why_syn>> -->
+<<widget "you-said">>
+<p>
+<<if !$args[1] eq "">><<print $args[0]>> "<strong><<print $args[1]>></strong>".<</if>>
+</p>
+<</widget>>
